@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Mail, Phone, Instagram, Youtube, Facebook } from 'lucide-react';
 import { INSTITUTION_DATA } from '../constants';
-import LogoAcer from '@/assets/logo-acer-preto-branco.png';
+import LogoAcer from '@/assets/logo-acer-preto-branco.webp';
 
 const Footer: React.FC = () => {
   return (

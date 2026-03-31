@@ -12,6 +12,7 @@ import Abada from './pages/Abada';
 import OlhoNoFuturo from './pages/OlhoNoFuturo';
 import RaizesEsporte from './pages/RaizesEsporte';
 import Contact from './pages/Contact';
+import EmendaParlamentar from './pages/EmendaParlamentar';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfUse from './pages/TermsOfUse';
 
@@ -39,6 +40,7 @@ const App: React.FC = () => {
             <Route path="/abiu" element={<Abada />} />
             <Route path="/olho-no-futuro" element={<OlhoNoFuturo />} />
             <Route path="/raizes-esporte" element={<RaizesEsporte />} />
+            <Route path="/emenda-parlamentar" element={<EmendaParlamentar />} />
             <Route path="/contato" element={<Contact />} />
             <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
             <Route path="/termos-de-uso" element={<TermsOfUse />} />

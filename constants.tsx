@@ -13,10 +13,10 @@ import {
   Target
 } from 'lucide-react';
 import { Project, TransparencyReport, ClassSchedule } from './types';
-import ProjectOlhoImage from '@/assets/projeto-olho-no-futuro-1.jpg';
-import ProjectAbiuImage from '@/assets/foto-abiu-capoeira-1.jpg';
-import ProjectEducacaoImage from '@/assets/educacao-complementar.jpg';
-import ProjectRaizesImage from '@/assets/raizes-esportes-1.jpg';
+import ProjectOlhoImage from '@/assets/projeto-olho-no-futuro-1.webp';
+import ProjectAbiuImage from '@/assets/foto-abiu-capoeira-1.webp';
+import ProjectEducacaoImage from '@/assets/educacao-complementar.webp';
+import ProjectRaizesImage from '@/assets/raizes-esportes-1.webp';
 
 export const INSTITUTION_DATA = {
   name: "Associação Cultural Esportiva Raízes (ACER)",
@@ -81,7 +81,7 @@ export const PROJECTS: Project[] = [
     title: "Futuros Projetos",
     description: "Estamos sempre planejando o próximo passo. Veja o que vem por aí e nos ajude a tirar do papel.",
     image: "",
-    categoryIcon: "rocket_launch",
+    categoryIcon: "",
     link: "/contato"
   }
 ];

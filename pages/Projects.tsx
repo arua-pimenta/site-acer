@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { PROJECTS } from '../constants';
 import { ArrowRight, CheckCircle2, MapPin, Users, Calendar } from 'lucide-react';
 
-import HeaderImage from '@/assets/foto-projeto-2.jpg';
+import HeaderImage from '@/assets/foto-projeto-2.webp';
 
 const Projects: React.FC = () => {
   return (

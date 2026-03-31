@@ -2,7 +2,7 @@
 import React from 'react';
 import { CAPOEIRA_SCHEDULE, INSTITUTION_DATA } from '../constants';
 import { Clock, Info, Users, Globe, Music, MapPin, Phone, Quote } from 'lucide-react';
-import AbiuImage from '@/assets/foto-abiu-capoeira-1.jpg';
+import AbiuImage from '@/assets/foto-abiu-capoeira-1.webp';
 
 const Abada: React.FC = () => {
   return (

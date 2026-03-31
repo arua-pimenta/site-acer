@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X, MessageCircle } from 'lucide-react';
 import { INSTITUTION_DATA } from '../constants';
-import Logo from '@/assets/logo-acer.png';
+import Logo from '@/assets/logo-acer.webp';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +13,7 @@ const Header: React.FC = () => {
 
   const navLinks = [
     { name: 'Início', href: '/' },
+    { name: 'Apoios', href: '/emenda-parlamentar' },
     { name: 'Projetos', href: '/projetos' },
     { name: 'Sobre Nós', href: '/sobre' },
     { name: 'Transparência', href: '/transparencia' },

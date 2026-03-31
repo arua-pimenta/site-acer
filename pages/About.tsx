@@ -2,7 +2,7 @@
 import React from 'react';
 import { INSTITUTION_DATA, STATS } from '../constants';
 import { ShieldCheck, Target, Heart, Award, Quote } from 'lucide-react';
-import SobreNos from '../assets/sobre-nos.jpg';
+import SobreNos from '../assets/sobre-nos.webp';
 
 const About: React.FC = () => {
   return (

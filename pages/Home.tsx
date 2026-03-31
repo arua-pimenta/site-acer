@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { PROJECTS, STATS, SCHEDULES } from '../constants';
 import { ArrowRight, Heart, Handshake, MapPin, ChevronLeft, ChevronRight, MessageCircle, Clock, Calendar, Quote, ShieldCheck } from 'lucide-react';
-import HeroImage1 from '@/assets/foto-projeto-1.jpg';
-import HeroImage2 from '@/assets/foto-projeto-2.jpg';
-import HeroImage3 from '@/assets/foto-abiu-capoeira-1.jpg';
+import HeroImage1 from '@/assets/foto-projeto-1.webp';
+import HeroImage2 from '@/assets/foto-projeto-2.webp';
+import HeroImage3 from '@/assets/foto-abiu-capoeira-1.webp';
 
 const slides = [
   {
@@ -153,6 +153,60 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* ★ Banner Destaque: Emenda Parlamentar ★ */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link
+            to="/emenda-parlamentar"
+            className="block group"
+          >
+            <div className="relative rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-acer-blue via-blue-700 to-blue-900 shadow-2xl hover:shadow-acer-blue/30 transition-all duration-500 hover:-translate-y-1">
+              {/* Animated Orbs */}
+              <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32 animate-float-slow"></div>
+              <div className="absolute bottom-0 left-0 w-72 h-72 bg-yellow-400/10 rounded-full blur-3xl -ml-20 -mb-20 animate-float-slow-reverse"></div>
+              <div className="absolute top-1/2 right-10 w-40 h-40 bg-emerald-400/10 rounded-full blur-2xl animate-float-delay"></div>
+
+              {/* Shimmer overlay */}
+              <div className="absolute inset-0 animate-shimmer rounded-[2.5rem] pointer-events-none"></div>
+
+              {/* "NOVO" indicator */}
+              <div className="absolute top-6 right-6 md:top-8 md:right-8 z-20">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-yellow-400 text-acer-dark text-[10px] font-black uppercase tracking-widest shadow-lg shadow-yellow-400/30 animate-bounce">
+                  ✦ NOVO
+                </span>
+              </div>
+
+              <div className="relative z-10 p-8 md:p-14 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                {/* Left: Badge + Texto */}
+                <div className="flex-1 text-center md:text-left">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 backdrop-blur-md text-emerald-300 text-[10px] font-black uppercase tracking-widest mb-5 border border-emerald-400/20 animate-pulse-badge">
+                    <ShieldCheck className="w-3.5 h-3.5" />
+                    Recurso Aprovado • Em Execução
+                  </div>
+                  <h2 className="text-2xl md:text-4xl font-display font-black text-white mb-3 tracking-tight leading-tight">
+                    Emenda Parlamentar<br />
+                    <span className="text-yellow-400">Aprovada com Sucesso</span>
+                  </h2>
+                  <p className="text-blue-100 text-base md:text-lg font-medium max-w-lg">
+                    Recurso de <strong className="text-white">R$ 979.999,00</strong> via Emenda do Dep. David Soares para implementação do projeto esportivo em Olímpia.
+                  </p>
+                </div>
+
+                {/* Right: Valor grande + CTA */}
+                <div className="flex flex-col items-center text-center flex-shrink-0">
+                  <span className="text-blue-200 text-xs font-black uppercase tracking-widest mb-1">Valor Global</span>
+                  <span className="text-4xl md:text-5xl font-display font-black text-white tracking-tighter mb-1">R$ 979 mil</span>
+                  <span className="text-blue-200 text-xs font-medium mb-5">360 Beneficiários • 5 Modalidades</span>
+                  <div className="bg-white text-acer-blue px-8 py-3.5 rounded-xl font-black text-xs tracking-widest group-hover:bg-yellow-400 group-hover:text-acer-dark transition-colors flex items-center gap-2 shadow-lg shadow-white/20">
+                    VER DETALHES <ArrowRight className="w-4 h-4 animate-slide-arrow" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Projects Highlights */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
@@ -176,6 +230,7 @@ const Home: React.FC = () => {
                   <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
@@ -201,9 +256,11 @@ const Home: React.FC = () => {
                 </div>
               ) : (
                 <div className="p-10 h-full flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-gray-900 border-2 border-dashed border-gray-200 dark:border-gray-700">
-                  <div className="w-20 h-20 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all">
-                    <span className="material-icons text-4xl text-acer-blue">{project.categoryIcon}</span>
-                  </div>
+                  {project.categoryIcon && (
+                    <div className="w-20 h-20 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all">
+                      <span className="material-icons text-4xl text-acer-blue">{project.categoryIcon}</span>
+                    </div>
+                  )}
                   <h3 className="text-2xl font-display font-black text-acer-dark dark:text-white mb-3">{project.title}</h3>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mb-8 leading-relaxed">
                     {project.description}

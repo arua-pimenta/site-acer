@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Calendar, TrendingUp, Swords, MapPin, Activity, Heart, Smile } from 'lucide-react';
 import { INSTITUTION_DATA } from '../constants';
-import HeroImage from '@/assets/raizes-esportes-2.jpg';
+import HeroImage from '@/assets/raizes-esportes-2.webp';
 
 const RaizesEsporte: React.FC = () => {
     return (

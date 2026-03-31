@@ -20,18 +20,18 @@ import {
     AlertCircle,
     MessageCircle
 } from 'lucide-react';
-import ProjectHeroImage from '@/assets/projeto-olho-no-futuro-1.jpg';
-import imgAcao1 from '@/assets/projeto-em-acao/projeto-em-acao-1.jpg';
-import imgAcao2 from '@/assets/projeto-em-acao/projeto-em-acao-2.jpg';
-import imgAcao3 from '@/assets/projeto-em-acao/projeto-em-acao-3.jpg';
-import imgAcao4 from '@/assets/projeto-em-acao/projeto-em-acao-4.jpg';
-import imgAcao5 from '@/assets/projeto-em-acao/projeto-em-acao-5.jpg';
-import imgAcao6 from '@/assets/projeto-em-acao/projeto-em-acao-6.jpg';
-import imgAcao7 from '@/assets/projeto-em-acao/projeto-em-acao-7.jpg';
-import imgAcao8 from '@/assets/projeto-em-acao/projeto-em-acao-8.jpg';
-import imgAcao9 from '@/assets/projeto-em-acao/projeto-em-acao-9.jpg';
-import imgAcao10 from '@/assets/projeto-em-acao/projeto-em-acao-10.jpg';
-import imgAcao11 from '@/assets/projeto-em-acao/projeto-em-acao-11.jpg';
+import ProjectHeroImage from '@/assets/projeto-olho-no-futuro-1.webp';
+import imgAcao1 from '@/assets/projeto-em-acao/projeto-em-acao-1.webp';
+import imgAcao2 from '@/assets/projeto-em-acao/projeto-em-acao-2.webp';
+import imgAcao3 from '@/assets/projeto-em-acao/projeto-em-acao-3.webp';
+import imgAcao4 from '@/assets/projeto-em-acao/projeto-em-acao-4.webp';
+import imgAcao5 from '@/assets/projeto-em-acao/projeto-em-acao-5.webp';
+import imgAcao6 from '@/assets/projeto-em-acao/projeto-em-acao-6.webp';
+import imgAcao7 from '@/assets/projeto-em-acao/projeto-em-acao-7.webp';
+import imgAcao8 from '@/assets/projeto-em-acao/projeto-em-acao-8.webp';
+import imgAcao9 from '@/assets/projeto-em-acao/projeto-em-acao-9.webp';
+import imgAcao10 from '@/assets/projeto-em-acao/projeto-em-acao-10.webp';
+import imgAcao11 from '@/assets/projeto-em-acao/projeto-em-acao-11.webp';
 
 const OlhoNoFuturo: React.FC = () => {
     const { hash } = useLocation();
