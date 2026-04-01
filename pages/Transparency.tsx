@@ -4,7 +4,17 @@ import { TRANSPARENCY_REPORTS, INSTITUTION_DATA } from '../constants';
 import { FileText, Download, ShieldCheck, PieChart, Archive, ArrowRight, FileCheck } from 'lucide-react';
 
 const Transparency: React.FC = () => {
-  const latestYear = 2024;
+  const latestYear = 2025;
+  const historyDocuments = [
+    {
+      year: 2024,
+      files: [
+        { name: "Balanço Patrimonial 2024", url: "/documentos/balanco-patrimonial-2024.pdf" },
+        { name: "DRE 2024", url: "/documentos/demonstracao-de-resultado-do-periodo-2024.pdf" },
+        { name: "Balancete 2024", url: "/documentos/balancete-de-verificacao-2024.pdf" }
+      ]
+    }
+  ];
 
   return (
     <div className="animate-in fade-in duration-500 py-16 md:py-24 bg-gray-50 dark:bg-gray-950 min-h-screen">
@@ -49,27 +59,27 @@ const Transparency: React.FC = () => {
               </p>
               <div className="flex flex-col gap-3">
                 <a
-                  href="/documentos/balanco-patrimonial-2024.pdf"
+                  href="/documentos/balanco-patrimonial-2025.pdf"
                   target="_blank"
                   className="bg-acer-blue hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-bold text-xs tracking-widest flex items-center justify-between shadow-md hover:shadow-lg transition transform hover:-translate-y-1 w-full"
                 >
-                  <span className="flex items-center gap-3"><FileText className="w-5 h-5" /> BALANÇO PATRIMONIAL 2024</span>
+                  <span className="flex items-center gap-3"><FileText className="w-5 h-5" /> BALANÇO PATRIMONIAL {latestYear}</span>
                   <Download className="w-4 h-4" />
                 </a>
                 <a
-                  href="/documentos/demonstracao-de-resultado-do-periodo-2024.pdf"
+                  href="/documentos/demonstracao-de-resultado-do-periodo-2025.pdf"
                   target="_blank"
                   className="bg-acer-blue hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-bold text-xs tracking-widest flex items-center justify-between shadow-md hover:shadow-lg transition transform hover:-translate-y-1 w-full"
                 >
-                  <span className="flex items-center gap-3"><FileText className="w-5 h-5" /> DRE - DEMONSTRAÇÃO DE RESULTADO 2024</span>
+                  <span className="flex items-center gap-3"><FileText className="w-5 h-5" /> DRE - DEMONSTRAÇÃO DE RESULTADO {latestYear}</span>
                   <Download className="w-4 h-4" />
                 </a>
                 <a
-                  href="/documentos/balancete-de-verificacao-2024.pdf"
+                  href="/documentos/balancete-de-verificacao-2025.pdf"
                   target="_blank"
                   className="bg-acer-blue hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-bold text-xs tracking-widest flex items-center justify-between shadow-md hover:shadow-lg transition transform hover:-translate-y-1 w-full"
                 >
-                  <span className="flex items-center gap-3"><FileText className="w-5 h-5" /> BALANCETE DE VERIFICAÇÃO 2024</span>
+                  <span className="flex items-center gap-3"><FileText className="w-5 h-5" /> BALANCETE DE VERIFICAÇÃO {latestYear}</span>
                   <Download className="w-4 h-4" />
                 </a>
               </div>
@@ -86,14 +96,36 @@ const Transparency: React.FC = () => {
             </div>
             <div className="flex items-center gap-2 text-gray-400 font-bold text-xs uppercase tracking-widest">
               <Archive className="w-4 h-4" />
-              0 Documentos
+              {historyDocuments.length} Ano(s)
             </div>
           </div>
 
-          <div className="col-span-12 py-10 text-center">
-            <p className="text-gray-500 dark:text-gray-400 text-lg font-medium">
-              Novos documentos serão adicionados conforme o encerramento dos exercícios fiscais.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {historyDocuments.map((history, idx) => (
+              <div key={idx} className="bg-white dark:bg-gray-800 p-8 rounded-[2rem] border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-3xl font-display font-black text-acer-dark dark:text-white">{history.year}</span>
+                  <div className="p-2 bg-gray-50 dark:bg-gray-700 rounded-lg text-gray-400">
+                    <Archive className="w-5 h-5" />
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  {history.files.map((file, fIdx) => (
+                    <a
+                      key={fIdx}
+                      href={file.url}
+                      target="_blank"
+                      className="flex items-center justify-between p-3 rounded-xl bg-gray-50 dark:bg-gray-900/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 text-gray-600 dark:text-gray-400 hover:text-acer-blue dark:hover:text-blue-400 transition-colors group"
+                    >
+                      <span className="text-[10px] font-bold uppercase tracking-tight flex items-center gap-2">
+                        <FileText className="w-3 h-3" /> {file.name}
+                      </span>
+                      <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
