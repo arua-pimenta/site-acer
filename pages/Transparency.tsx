@@ -87,6 +87,53 @@ const Transparency: React.FC = () => {
           </div>
         </div>
 
+        {/* Seção: Cotações Prévias de Preços e Editais */}
+        <div className="mb-16">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="h-8 w-1.5 bg-acer-blue rounded-full"></div>
+            <h2 className="text-2xl font-display font-black text-acer-dark dark:text-white uppercase tracking-tight">Editais e Cotações Prévias</h2>
+          </div>
+
+          <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-8 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider border border-amber-100 dark:border-amber-800/30">
+                    Processo Ativo
+                  </span>
+                  <span className="text-gray-400 text-xs font-semibold">Publicado em: 01/07/2026</span>
+                </div>
+                <h3 className="text-xl font-display font-black text-acer-dark dark:text-white mb-2">
+                  Cotação Prévia de Preços Nº 001/2026
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                  <strong>Objeto:</strong> Contratação de empresa especializada para prestação de serviços técnicos na área de Recursos Humanos, visando atender às demandas de gestão de pessoal inerentes à execução de "Implementação e Desenvolvimento do Projeto esportivo, no Município de Olímpia/SP".
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-500 dark:text-gray-400">
+                  <div>
+                    <strong>Prazo de envio das propostas:</strong> Até 08/07/2026
+                  </div>
+                  <div>
+                    <strong>E-mail para envio:</strong> <a href="mailto:aculturaesportiva@gmail.com" className="text-acer-blue hover:underline">aculturaesportiva@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row md:flex-col gap-3 justify-center">
+                <a
+                  href="/documentos/cotacao-previa-001-2026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-acer-blue hover:bg-blue-700 text-white px-6 py-3.5 rounded-xl font-bold text-xs tracking-widest flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 text-center whitespace-nowrap"
+                >
+                  <FileText className="w-4 h-4" />
+                  VER TERMO DE REFERÊNCIA
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Arquivo Histórico */}
         <div>
           <div className="flex items-center justify-between mb-8">
