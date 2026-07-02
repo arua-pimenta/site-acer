@@ -157,7 +157,7 @@ const Transparency: React.FC = () => {
                   Retificação Nº 001/2026 da Cotação Prévia Nº 001/2026
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4 font-medium">
-                  <strong>Correção:</strong> Ajuste na quantidade de profissionais (cargos) a serem contratados no Termo de Referência. Onde se lia a contratação de 1 Professor de Educação Física, passa-se a ler a contratação de <strong>2 Professores de Educação Física</strong> para a execução das atividades esportivas do projeto.
+                  <strong>Objeto:</strong> Publicação do Termo de Retificação Nº 001/2026 contendo ajustes administrativos e retificações técnicas de itens do Termo de Referência da Cotação Prévia de Preços Nº 001/2026.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-500 dark:text-gray-400 font-bold">
                   <div>
