@@ -109,12 +109,21 @@ const Transparency: React.FC = () => {
                 <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
                   <strong>Objeto:</strong> Contratação de empresa especializada para prestação de serviços técnicos na área de Recursos Humanos, visando atender às demandas de gestão de pessoal inerentes à execução de "Implementação e Desenvolvimento do Projeto esportivo, no Município de Olímpia/SP".
                 </p>
+                <div className="mb-4 bg-gray-50 dark:bg-gray-900/50 p-4 rounded-xl border border-gray-100 dark:border-gray-800">
+                  <strong className="text-acer-dark dark:text-white text-xs block mb-2">Documentos de Regularidade Exigidos:</strong>
+                  <ul className="list-disc pl-5 text-xs text-gray-500 dark:text-gray-400 space-y-1">
+                    <li>Cartão do CNPJ ativo com CNAE compatível;</li>
+                    <li>Certidão Negativa relativa aos Tributos Federais e à Dívida Ativa da União;</li>
+                    <li>Certidão de Regularidade do FGTS;</li>
+                    <li>Certidão Negativa de Débitos Trabalhistas (CNDT).</li>
+                  </ul>
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-500 dark:text-gray-400">
                   <div>
                     <strong>Prazo de envio das propostas:</strong> Até 08/07/2026
                   </div>
                   <div>
-                    <strong>E-mail para envio:</strong> <a href="mailto:aculturaesportiva@gmail.com" className="text-acer-blue hover:underline">aculturaesportiva@gmail.com</a>
+                    <strong>E-mail para envio:</strong> <a href="mailto:aculturalesportiva@gmail.com" className="text-acer-blue hover:underline">aculturalesportiva@gmail.com</a>
                   </div>
                 </div>
               </div>
