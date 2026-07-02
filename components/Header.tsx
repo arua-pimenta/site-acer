@@ -1,13 +1,35 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X, MessageCircle, Sun, Moon } from 'lucide-react';
 import { INSTITUTION_DATA } from '../constants';
 import Logo from '@/assets/logo-acer.webp';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || savedTheme === 'light') {
+        return savedTheme;
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return 'light';
+  });
 
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
 
   const whatsappUrl = `https://wa.me/${INSTITUTION_DATA.whatsapp}`;
 
@@ -21,7 +43,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-gray-800">
+    <nav className="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo Oficial ACER */}
@@ -38,7 +60,7 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-8 items-center">
+          <div className="hidden md:flex space-x-6 items-center">
             {navLinks.map((link) => (
               <NavLink
                 key={link.name}
@@ -54,7 +76,18 @@ const Header: React.FC = () => {
               </NavLink>
             ))}
 
-
+            {/* Dark Mode Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 transition-colors"
+              aria-label="Alternar Tema"
+            >
+              {theme === 'dark' ? (
+                <Sun className="w-5 h-5 text-yellow-400 animate-pulse" />
+              ) : (
+                <Moon className="w-5 h-5 text-gray-600" />
+              )}
+            </button>
 
             <a
               href={whatsappUrl}
@@ -67,12 +100,23 @@ const Header: React.FC = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Toggle & Theme button */}
           <div className="md:hidden flex items-center gap-4">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 transition-colors"
+              aria-label="Alternar Tema"
+            >
+              {theme === 'dark' ? (
+                <Sun className="w-5 h-5 text-yellow-400" />
+              ) : (
+                <Moon className="w-5 h-5 text-gray-600" />
+              )}
+            </button>
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-500 hover:text-acer-blue focus:outline-none"
+              className="text-gray-500 dark:text-gray-400 hover:text-acer-blue focus:outline-none"
             >
               {isMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
             </button>

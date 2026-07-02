@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { INSTITUTION_DATA } from '../constants';
+import { motion } from 'framer-motion';
 import {
   ShieldCheck,
   Award,
@@ -76,7 +77,12 @@ const materiaisDestaques = [
 
 const EmendaParlamentar: React.FC = () => {
   return (
-    <div className="animate-in fade-in duration-500">
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
+      className="bg-white dark:bg-gray-900 transition-colors duration-300"
+    >
 
       {/* ━━━ HERO ━━━ */}
       <section className="bg-acer-blue py-20 md:py-28 text-white relative overflow-hidden">
@@ -467,7 +473,7 @@ const EmendaParlamentar: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

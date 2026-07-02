@@ -1,18 +1,20 @@
-
 import React from 'react';
 import { CAPOEIRA_SCHEDULE, INSTITUTION_DATA } from '../constants';
 import { Clock, Info, Users, Globe, Music, MapPin, Phone, Quote } from 'lucide-react';
+import { BerimbauScene } from '../components/BerimbauScene';
 import AbiuImage from '@/assets/foto-abiu-capoeira-1.webp';
 
 const Abada: React.FC = () => {
   return (
-    <div className="animate-in fade-in duration-500 pb-24">
+    <div className="animate-in fade-in duration-500 pb-24 bg-white dark:bg-gray-900 transition-colors duration-300">
       {/* Hero */}
       <div className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img
           src={AbiuImage}
           alt="Capoeira ABIU"
-          className="absolute inset-0 w-full h-full object-cover"
+          decoding="async"
+          fetchPriority="high"
+          className="absolute inset-0 w-full h-full object-cover premium-image"
         />
         <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
         <div className="relative z-10 text-center px-4">
@@ -40,13 +42,19 @@ const Abada: React.FC = () => {
                     "Com respeito e dignidade é que se constrói um mundo melhor"
                   </p>
                 </div>
-                <p>
+                <p className="mb-4">
                   O grupo teve origem em <strong>1987</strong>, sendo o pilar fundador da associação. Foi formalizado em <strong>1998</strong> como <strong>'Associação de Capoeira Raízes – ABIÚ BRASIL CAPOEIRA'</strong>.
                 </p>
                 <p>
                   Focamos na preservação das tradições, musicalidade e técnica da capoeira como ferramenta de inclusão social e cidadania.
                 </p>
               </div>
+            </div>
+
+            {/* 3D Interactive Sculpture */}
+            <div className="space-y-3">
+              <h3 className="text-sm font-black text-acer-blue dark:text-blue-400 uppercase tracking-widest">Patrimônio Cultural</h3>
+              <BerimbauScene />
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6">
@@ -92,7 +100,7 @@ const Abada: React.FC = () => {
                     <div className="flex justify-between items-end">
                       <h4 className="text-lg font-bold text-acer-dark dark:text-white">{item.day}</h4>
                       {item.time && (
-                        <span className="bg-white dark:bg-gray-800 px-3 py-1 rounded-lg text-xs font-black text-gray-500 shadow-sm border border-gray-100 dark:border-gray-700">
+                        <span className="bg-white dark:bg-gray-800 px-3 py-1 rounded-lg text-xs font-black text-gray-500 dark:text-gray-400 shadow-sm border border-gray-100 dark:border-gray-700">
                           {item.time}
                         </span>
                       )}
@@ -100,18 +108,6 @@ const Abada: React.FC = () => {
                   </div>
                 </div>
               ))}
-              <div className="pt-6 border-t border-gray-100 dark:border-gray-700">
-                <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 mb-8">
-                  <Info className="w-5 h-5 text-acer-blue" />
-                  <span>Polos distribuídos por toda a cidade de Olímpia.</span>
-                </div>
-                <a
-                  href="#/contato"
-                  className="block w-full text-center bg-acer-blue text-white py-5 rounded-2xl font-black shadow-xl hover:bg-blue-700 transition transform hover:scale-[1.02]"
-                >
-                  QUERO PARTICIPAR
-                </a>
-              </div>
             </div>
           </div>
         </div>
