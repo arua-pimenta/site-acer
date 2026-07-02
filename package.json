@@ -16,6 +16,7 @@
     "dompurify": "^3.4.11",
     "framer-motion": "^12.42.2",
     "lucide-react": "^0.562.0",
+    "pdf-lib": "^1.17.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-lazy-load-image-component": "^1.6.3",

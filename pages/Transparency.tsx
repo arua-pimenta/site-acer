@@ -86,12 +86,13 @@ const Transparency: React.FC = () => {
         </div>
 
         {/* Seção: Cotações Prévias de Preços e Editais */}
-        <div className="mb-16">
+        <div className="mb-16 space-y-6">
           <div className="flex items-center gap-3 mb-8">
             <div className="h-8 w-1.5 bg-acer-blue dark:bg-blue-400 rounded-full"></div>
             <h2 className="text-2xl font-display font-black text-acer-dark dark:text-white uppercase tracking-tight">Editais e Cotações Prévias</h2>
           </div>
 
+          {/* Card 1: Termo de Referência original */}
           <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-8 border border-gray-150 dark:border-gray-700/80 shadow-sm hover:shadow-md transition-all duration-300">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div className="flex-1">
@@ -137,6 +138,48 @@ const Transparency: React.FC = () => {
                 >
                   <FileText className="w-4 h-4" />
                   VER TERMO DE REFERÊNCIA
+                </motion.a>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Retificação Nº 001/2026 */}
+          <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-8 border border-gray-150 dark:border-gray-700/80 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-yellow-400/10 text-yellow-600 dark:text-yellow-400 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider border border-yellow-250/30">
+                    Retificação de Edital
+                  </span>
+                  <span className="text-gray-400 text-xs font-semibold">Publicado em: 02/07/2026</span>
+                </div>
+                <h3 className="text-xl font-display font-black text-acer-dark dark:text-white mb-2">
+                  Retificação Nº 001/2026 da Cotação Prévia Nº 001/2026
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4 font-medium">
+                  <strong>Correção:</strong> Ajuste na quantidade de profissionais (cargos) a serem contratados no Termo de Referência. Onde se lia a contratação de 1 Professor de Educação Física, passa-se a ler a contratação de <strong>2 Professores de Educação Física</strong> para a execução das atividades esportivas do projeto.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-500 dark:text-gray-400 font-bold">
+                  <div>
+                    <strong>Edital de Referência:</strong> Cotação Prévia Nº 001/2026
+                  </div>
+                  <div>
+                    <strong>Prazo de envio das propostas:</strong> Inalterado (Até 08/07/2026)
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row md:flex-col gap-3 justify-center">
+                <motion.a
+                  href="/documentos/retificacao-cotacao-001-2026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3.5 rounded-xl font-bold text-xs tracking-widest flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all text-center whitespace-nowrap"
+                >
+                  <FileText className="w-4 h-4" />
+                  VER TERMO DE RETIFICAÇÃO
                 </motion.a>
               </div>
             </div>
