@@ -16,6 +16,7 @@ import {
 import { motion } from 'framer-motion';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import ProjectHeroImage from '@/assets/projeto-olho-no-futuro-1.webp';
+import BannerMatriculas from '@/assets/matriculas-abertas-banner.webp';
 import imgAcao1 from '@/assets/projeto-em-acao/projeto-em-acao-1.webp';
 import imgAcao2 from '@/assets/projeto-em-acao/projeto-em-acao-2.webp';
 import imgAcao3 from '@/assets/projeto-em-acao/projeto-em-acao-3.webp';
@@ -189,7 +190,20 @@ const OlhoNoFuturo: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                        {/* Banner Visual */}
+                        <div className="flex justify-center w-full">
+                            <div className="relative group rounded-3xl overflow-hidden shadow-2xl transition duration-500 hover:scale-[1.02] border-4 border-white dark:border-gray-700 max-w-sm">
+                                <img
+                                    src={BannerMatriculas}
+                                    alt="Cartaz Informativo Aulas Gratuitas ACER"
+                                    className="w-full h-auto object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent pointer-events-none"></div>
+                            </div>
+                        </div>
+
+                        {/* Documentação */}
                         <div>
                             <h3 className="flex items-center gap-2 font-bold text-lg mb-6 text-acer-dark dark:text-white">
                                 <FileText className="w-5 h-5 text-acer-blue" />
@@ -214,29 +228,30 @@ const OlhoNoFuturo: React.FC = () => {
                             </ul>
                         </div>
 
+                        {/* Inscrição e Informações */}
                         <div className="space-y-8">
                             <div className="bg-yellow-50 dark:bg-yellow-900/10 p-6 rounded-2xl border border-yellow-250 dark:border-yellow-700/25">
                                 <div className="flex gap-4">
                                     <AlertCircle className="w-6 h-6 text-yellow-500 shrink-0" />
                                     <div>
                                         <h4 className="font-bold text-acer-dark dark:text-white mb-1">Importante</h4>
-                                        <p className="text-sm text-gray-600 dark:text-gray-300">Público-alvo: Jovens de 6 a 17 anos residentes em Olímpia ou Baguaçu</p>
+                                        <p className="text-sm text-gray-600 dark:text-gray-300">Público-alvo: Jovens de 6 a 18 anos residentes em Olímpia ou Baguaçu</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="flex flex-col gap-3">
                                 <a
-                                    href="https://wa.me/551732811727?text=Olá,%20tudo%20bem?%20Como%20faço%20para%20inscrever%20meu%20filho%20no%20projeto?"
+                                    href="https://wa.me/5517997033426?text=Olá!%20Gostaria%20de%20matricular%20meu%20filho%20nas%20aulas%20gratuitas%20da%20ACER."
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1fae53] text-white px-8 py-5 rounded-2xl font-black text-lg uppercase tracking-widest transition-all shadow-xl hover:-translate-y-0.5 group"
+                                    className="w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1fae53] text-white px-8 py-5 rounded-2xl font-black text-base uppercase tracking-widest transition-all shadow-xl hover:-translate-y-0.5 group"
                                 >
                                     <MessageCircle className="w-8 h-8 group-hover:scale-110 transition-transform" />
-                                    Quero inscrever meu filho
+                                    Inscrever no WhatsApp
                                 </a>
                                 <p className="text-center text-xs text-gray-400 mt-2">
-                                    Fale diretamente com nossa equipe no WhatsApp
+                                    Fale diretamente com nossa equipe: (17) 99703-3426
                                 </p>
                             </div>
                         </div>

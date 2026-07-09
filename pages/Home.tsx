@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import HeroImage1 from '@/assets/foto-projeto-1.webp';
 import HeroImage2 from '@/assets/foto-projeto-2.webp';
 import HeroImage3 from '@/assets/foto-abiu-capoeira-1.webp';
+import BannerMatriculas from '@/assets/matriculas-abertas-banner.webp';
 
 const slides = [
   {
@@ -315,6 +316,80 @@ const Home: React.FC = () => {
               )}
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* ★ Banner de Matrículas Abertas ★ */}
+      <section className="py-24 bg-white dark:bg-gray-900 transition-colors duration-300 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-yellow-400/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="bg-gray-50 dark:bg-gray-800/40 rounded-[3rem] overflow-hidden shadow-xl border border-gray-100 dark:border-gray-700/80 p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 transition-colors duration-300">
+            
+            {/* Left Content */}
+            <div className="flex-1 text-center lg:text-left">
+              <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-yellow-400/20 text-yellow-600 dark:text-yellow-400 text-xs font-black uppercase tracking-widest mb-6">
+                ✦ Matrículas Abertas
+              </span>
+              <h2 className="text-3xl md:text-5xl font-display font-black text-acer-dark dark:text-white mb-6 tracking-tight uppercase leading-tight">
+                Esporte e Cultura <br />
+                <span className="text-acer-blue dark:text-blue-400">100% Gratuito</span>
+              </h2>
+              <p className="text-gray-650 dark:text-gray-300 text-lg font-medium mb-8 leading-relaxed max-w-xl">
+                Oferecemos aulas gratuitas para crianças e adolescentes de <strong>06 a 18 anos</strong>. Uma iniciativa para promover a cidadania, disciplina e saúde através do esporte!
+              </p>
+
+              {/* Grid of modalities */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-10 text-left">
+                {[
+                  { name: "Capoeira", bg: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20" },
+                  { name: "Muay Thai", bg: "bg-red-500/10 text-red-600 dark:text-red-400 border-red-500/20" },
+                  { name: "Futebol", bg: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20" },
+                  { name: "Handebol", bg: "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20" },
+                  { name: "Vôlei", bg: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20" }
+                ].map((item, idx) => (
+                  <div key={idx} className={`px-4 py-3 rounded-2xl border text-sm font-bold text-center ${item.bg}`}>
+                    {item.name}
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA buttons */}
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                <a
+                  href="https://wa.me/5517997033426?text=Olá!%20Gostaria%20de%20matricular%20meu%20filho%20nas%20aulas%20gratuitas%20da%20ACER."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-acer-blue hover:bg-blue-750 dark:bg-yellow-400 dark:text-acer-dark dark:hover:bg-yellow-500 text-white px-8 py-4.5 rounded-2xl font-black text-sm tracking-widest shadow-lg shadow-acer-blue/20 dark:shadow-yellow-400/10 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group"
+                >
+                  <MessageCircle className="w-5 h-5 fill-current" />
+                  INSCREVER VIA WHATSAPP
+                </a>
+                <Link
+                  to="/olho-no-futuro#matricula"
+                  className="bg-transparent text-acer-dark dark:text-white border-2 border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 px-8 py-4 rounded-2xl font-black text-sm tracking-widest transition transform hover:-translate-y-0.5 flex items-center justify-center"
+                >
+                  VER DOCUMENTAÇÃO
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Visual Image */}
+            <div className="w-full lg:w-[420px] flex-shrink-0">
+              <div className="relative group mx-auto max-w-sm rounded-[2rem] overflow-hidden shadow-2xl transition duration-500 hover:scale-[1.02] border-4 border-white dark:border-gray-700">
+                <img
+                  src={BannerMatriculas}
+                  alt="Cartaz Informativo Aulas Gratuitas ACER"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
