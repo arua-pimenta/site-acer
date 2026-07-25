@@ -26,6 +26,10 @@ async function main() {
     'public/documentos/retificacao-cotacao-001-2026.pdf',
     'Retificação da Cotação Prévia de Preços Nº 001/2026 - ACER'
   );
+  await updateMetadata(
+    'public/documentos/edital-cotacao-previa-eletronica-001-2026.pdf',
+    'Edital de Cotação Prévia Eletrônica Nº 001/2026 - ACER'
+  );
 }
 
 main();

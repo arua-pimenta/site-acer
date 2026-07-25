@@ -184,6 +184,55 @@ const Transparency: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Card 3: Edital de Cotação Prévia Eletrônica Nº 001/2026 */}
+          <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-8 border border-gray-150 dark:border-gray-700/80 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider border border-emerald-100 dark:border-emerald-800/30">
+                    Cotação Eletrônica
+                  </span>
+                  <span className="text-gray-400 text-xs font-semibold">Publicado em: 24/07/2026</span>
+                </div>
+                <h3 className="text-xl font-display font-black text-acer-dark dark:text-white mb-2">
+                  Edital de Processo de Cotação Prévia Eletrônica Nº 001/2026
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4 font-medium">
+                  <strong>Objeto:</strong> Contratação de empresa especializada para prestação de serviços técnicos na área de Recursos Humanos, visando atender às demandas de gestão de pessoal inerentes à execução do projeto "Implementação e Desenvolvimento do Projeto Esportivo, no Município de Olímpia/SP" (Termo de Fomento Nº 271 - Ministério do Esporte).
+                </p>
+                <div className="mb-4 bg-gray-50 dark:bg-gray-900/50 p-4 rounded-xl border border-gray-100 dark:border-gray-800 font-medium">
+                  <strong className="text-acer-dark dark:text-white text-xs block mb-2 font-black">Serviços / Cargos Solicitados:</strong>
+                  <ul className="list-disc pl-5 text-xs text-gray-500 dark:text-gray-400 space-y-1">
+                    <li><strong>Assessoria Técnica (01 vaga):</strong> Acompanhamento do planejamento, execução e monitoramento das atividades do projeto;</li>
+                    <li><strong>Professor de Capoeira (01 vaga - 20h/sem):</strong> Profissional com conhecimentos técnicos, musicalidade, história, filosofia e cultura da capoeira.</li>
+                  </ul>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-500 dark:text-gray-400 font-bold">
+                  <div>
+                    <strong>Prazo de envio das propostas:</strong> Até 10/08/2026 às 23:59h
+                  </div>
+                  <div>
+                    <strong>E-mail para envio:</strong> <a href="mailto:aculturalesportiva@gmail.com" className="text-acer-blue dark:text-blue-400 hover:underline">aculturalesportiva@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row md:flex-col gap-3 justify-center">
+                <motion.a
+                  href="/documentos/edital-cotacao-previa-eletronica-001-2026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="bg-acer-blue hover:bg-blue-700 text-white px-6 py-3.5 rounded-xl font-bold text-xs tracking-widest flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all text-center whitespace-nowrap"
+                >
+                  <FileText className="w-4 h-4" />
+                  VER EDITAL ELETRÔNICO
+                </motion.a>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Arquivo Histórico */}
