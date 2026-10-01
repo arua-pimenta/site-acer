@@ -97,8 +97,8 @@ const Transparency: React.FC = () => {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider border border-amber-100 dark:border-amber-800/30">
-                    Processo Ativo
+                  <span className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider border border-emerald-100 dark:border-emerald-800/30">
+                    Processo Concluído
                   </span>
                   <span className="text-gray-400 text-xs font-semibold">Publicado em: 01/07/2026</span>
                 </div>
@@ -229,6 +229,152 @@ const Transparency: React.FC = () => {
                 >
                   <FileText className="w-4 h-4" />
                   VER EDITAL ELETRÔNICO
+                </motion.a>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 4: Termo de Homologação Nº 001/2026 */}
+          <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-8 border border-emerald-200 dark:border-emerald-800/40 shadow-sm hover:shadow-md transition-all duration-300 ring-1 ring-emerald-100 dark:ring-emerald-900/30">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider border border-emerald-100 dark:border-emerald-800/30">
+                    ✓ Homologado
+                  </span>
+                  <span className="text-gray-400 text-xs font-semibold">Publicado em: 11/08/2026</span>
+                </div>
+                <h3 className="text-xl font-display font-black text-acer-dark dark:text-white mb-2">
+                  Termo de Homologação — Cotação Prévia Nº 001/2026
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4 font-medium">
+                  <strong>Objeto:</strong> Homologação do procedimento de cotação prévia de preços (Edital nº 01/2026 — Termo de Fomento nº 271) para aquisição de serviços técnicos em Recursos Humanos e Professor de Capoeira. Critério: <strong>menor preço global</strong>, com mínimo de 3 orçamentos válidos.
+                </p>
+                <div className="mb-4 bg-emerald-50/50 dark:bg-emerald-900/10 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 font-medium">
+                  <strong className="text-acer-dark dark:text-white text-xs block mb-2 font-black">Resultado da Adjudicação:</strong>
+                  <ul className="list-disc pl-5 text-xs text-gray-500 dark:text-gray-400 space-y-1">
+                    <li><strong>Item 01 — Assessoria Técnica (12 meses):</strong> Vergínia Mariana Gonçalves (MEI) — R$ 2.000,00/mês — <strong>Total: R$ 24.000,00</strong></li>
+                    <li><strong>Item 02 — Professor de Capoeira (12 meses):</strong> Edimar Silva Marques — R$ 3.100,00/mês — <strong>Total: R$ 37.200,00</strong></li>
+                  </ul>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-500 dark:text-gray-400 font-bold">
+                  <div>
+                    <strong>Valor Total da Homologação:</strong> <span className="text-emerald-600 dark:text-emerald-400">R$ 61.200,00</span>
+                  </div>
+                  <div>
+                    <strong>Assinado por:</strong> Marco Aurélio Cotrim de Carvalho (Presidente)
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row md:flex-col gap-3 justify-center">
+                <motion.a
+                  href="/documentos/homologacao-cotacao-001-2026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3.5 rounded-xl font-bold text-xs tracking-widest flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all text-center whitespace-nowrap"
+                >
+                  <FileText className="w-4 h-4" />
+                  VER HOMOLOGAÇÃO
+                </motion.a>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 5: Edital de Cotação Prévia Eletrônica Nº 002/2026 */}
+          <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-8 border border-gray-150 dark:border-gray-700/80 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider border border-emerald-100 dark:border-emerald-800/30">
+                    Processo Concluído
+                  </span>
+                  <span className="text-gray-400 text-xs font-semibold">Publicado em: 09/09/2026</span>
+                </div>
+                <h3 className="text-xl font-display font-black text-acer-dark dark:text-white mb-2">
+                  Edital de Processo de Cotação Prévia Eletrônica Nº 002/2026
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4 font-medium">
+                  <strong>Objeto:</strong> Contratação de empresa especializada para prestação de serviços técnicos na área de Recursos Humanos, visando atender às demandas de gestão de pessoal inerentes à execução do projeto "Implementação e Desenvolvimento do Projeto esportivo, no Município de Olímpia/SP" (Termo de Fomento Nº 271 - Instrumento nº 984811 - Ministério do Esporte).
+                </p>
+                <div className="mb-4 bg-gray-50 dark:bg-gray-900/50 p-4 rounded-xl border border-gray-100 dark:border-gray-800 font-medium">
+                  <strong className="text-acer-dark dark:text-white text-xs block mb-2 font-black">Serviços / Cargos Solicitados:</strong>
+                  <ul className="list-disc pl-5 text-xs text-gray-500 dark:text-gray-400 space-y-1">
+                    <li><strong>Monitor (01 vaga - 40h/sem):</strong> Acompanhar o planejamento, execução e monitoramento das atividades do projeto (Vigência: 10 meses | Valor máximo de referência: R$ 20.000,00).</li>
+                  </ul>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-500 dark:text-gray-400 font-bold">
+                  <div>
+                    <strong>Prazo de envio das propostas:</strong> Até 26/09/2026 às 12:00h
+                  </div>
+                  <div>
+                    <strong>E-mail para envio:</strong> <a href="mailto:aculturalesportiva@gmail.com" className="text-acer-blue dark:text-blue-400 hover:underline">aculturalesportiva@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row md:flex-col gap-3 justify-center">
+                <motion.a
+                  href="/documentos/edital-cotacao-previa-eletronica-002-2026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="bg-acer-blue hover:bg-blue-700 text-white px-6 py-3.5 rounded-xl font-bold text-xs tracking-widest flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all text-center whitespace-nowrap"
+                >
+                  <FileText className="w-4 h-4" />
+                  VER EDITAL ELETRÔNICO Nº 002/2026
+                </motion.a>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 6: Termo de Homologação Nº 002/2026 */}
+          <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-8 border border-emerald-200 dark:border-emerald-800/40 shadow-sm hover:shadow-md transition-all duration-300 ring-1 ring-emerald-100 dark:ring-emerald-900/30">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider border border-emerald-100 dark:border-emerald-800/30">
+                    ✓ Homologado
+                  </span>
+                  <span className="text-gray-400 text-xs font-semibold">Publicado em: 30/09/2026</span>
+                </div>
+                <h3 className="text-xl font-display font-black text-acer-dark dark:text-white mb-2">
+                  Termo de Homologação — Cotação Prévia Nº 002/2026
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4 font-medium">
+                  <strong>Objeto:</strong> Homologação do procedimento de cotação prévia de preços (Edital nº 02/2026 — Termo de Fomento nº 271) para aquisição de serviços técnicos na área de Recursos Humanos necessários à execução do projeto pactuado. Critério: <strong>menor preço global</strong>, com mínimo de 3 orçamentos válidos.
+                </p>
+                <div className="mb-4 bg-emerald-50/50 dark:bg-emerald-900/10 p-4 rounded-xl border border-emerald-100 dark:border-emerald-800/30 font-medium">
+                  <strong className="text-acer-dark dark:text-white text-xs block mb-2 font-black">Resultado da Adjudicação:</strong>
+                  <ul className="list-disc pl-5 text-xs text-gray-500 dark:text-gray-400 space-y-1">
+                    <li><strong>Fornecedor Vencedor:</strong> Diego da Silva dos Santos - MEI (CNPJ: 69.059.314/0001-66)</li>
+                    <li><strong>Serviços:</strong> Monitor (Serviços técnicos na área de Recursos Humanos) — R$ 2.000,00/mês — <strong>Total: R$ 20.000,00</strong></li>
+                  </ul>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-500 dark:text-gray-400 font-bold">
+                  <div>
+                    <strong>Valor Total da Homologação:</strong> <span className="text-emerald-600 dark:text-emerald-400">R$ 20.000,00</span>
+                  </div>
+                  <div>
+                    <strong>Assinado por:</strong> Marco Aurélio Cotrim de Carvalho (Presidente)
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row md:flex-col gap-3 justify-center">
+                <motion.a
+                  href="/documentos/homologacao-cotacao-002-2026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3.5 rounded-xl font-bold text-xs tracking-widest flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all text-center whitespace-nowrap"
+                >
+                  <FileText className="w-4 h-4" />
+                  VER HOMOLOGAÇÃO
                 </motion.a>
               </div>
             </div>

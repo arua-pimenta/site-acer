@@ -30,6 +30,18 @@ async function main() {
     'public/documentos/edital-cotacao-previa-eletronica-001-2026.pdf',
     'Edital de Cotação Prévia Eletrônica Nº 001/2026 - ACER'
   );
+  await updateMetadata(
+    'public/documentos/homologacao-cotacao-001-2026.pdf',
+    'Termo de Homologação da Cotação Prévia Nº 001/2026 - ACER'
+  );
+  await updateMetadata(
+    'public/documentos/edital-cotacao-previa-eletronica-002-2026.pdf',
+    'Edital de Cotação Prévia Eletrônica Nº 002/2026 - ACER'
+  );
+  await updateMetadata(
+    'public/documentos/homologacao-cotacao-002-2026.pdf',
+    'Termo de Homologação da Cotação Prévia Nº 002/2026 - ACER'
+  );
 }
 
 main();
